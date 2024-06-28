@@ -17,8 +17,6 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
-  display: none;
 }
 
 ul.dropdown-menu li:hover {
@@ -26,7 +24,38 @@ ul.dropdown-menu li:hover {
 }
 
 .visible {
-  display: block;
+  animation: appear .5s;
+  transform-origin: top;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.hide {
+  animation: disappear .2s forwards;
+  transform-origin: top;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@keyframes appear {
+  0% {
+    transform: scaleY(0);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0);
+  }
 }
 
 

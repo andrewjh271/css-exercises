@@ -16,4 +16,10 @@ button {
   font-size: 18px;
   padding: 16px 24px;
   text-align: center;
+  transition: transform .5s;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
